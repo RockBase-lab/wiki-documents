@@ -16,6 +16,7 @@ This page records content changes to the wiki site itself. For firmware version 
 - **Products**: NM-CYD-C5 page adds supported/in-progress projects (GhostESP, ESPectre, the_poom, and more), I2C pull-up note (IO8/IO9), TFT_eSPI color-inversion fix, WS2812/backlight pinout, and the Colorful-Ant external-antenna variant
 - **Projects**: ESP32-Dashboard docs cover the NM-EPD-420-4C board, three new HomeWeatherTheme themes (HOME-RHYTHM / HOME-ATLAS / HOME-PRINT), and Google Calendar ICS sync
 - **Projects**: NM-EPD-420 port ecosystem adds nm-epd420-bw-demo, Inkstone, emini Home, and AgentDeck; MeshCore section lists the five Web Flasher role firmwares; Meshtastic section notes InkHUD and ES8311 audio support
+- **Projects**: new OpenDisplay guide for the NM-EPD-420-4C — BLE configuration, image upload, and Home Assistant integration (EN + ZH); the port ecosystem now lists OpenDisplay as the eleventh ported project
 
 ### Improved
 - **Platform**: Web Flasher supported-firmware list synced with the live ESPWebApps catalog (added AgentDeck, nm-epd420-bw-demo, MeshCore, ESPectre; removed the delisted ESP32-Weather-EPD)

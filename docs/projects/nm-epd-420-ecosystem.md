@@ -6,7 +6,7 @@ description: Official NM-EPD-420 ports of Meshtastic, MeshCore, TRMNL and more
 
 # NM-EPD-420 Port Ecosystem
 
-The [NM-EPD-420](../products/nm-epd-420.md) (ESP32-S3 + 4.2" e-ink) has been officially ported to ten open-source projects. Clone the linked branch and build — application firmware for these projects is also available on the [RockBase IoT Web Flasher](https://flash.rockbaseiot.com).
+The [NM-EPD-420](../products/nm-epd-420.md) (ESP32-S3 + 4.2" e-ink) has been officially ported to eleven open-source projects. Clone the linked branch and build — application firmware for these projects is also available on the [RockBase IoT Web Flasher](https://flash.rockbaseiot.com).
 
 ## Ported Projects
 
@@ -22,6 +22,7 @@ The [NM-EPD-420](../products/nm-epd-420.md) (ESP32-S3 + 4.2" e-ink) has been off
 | **Inkstone Firmware** | RockBase IoT's own local image-push firmware: open `inkstone.local` in a browser to pick an image, crop it, preview two quantization algorithms, and push it to the panel; Bearer-authenticated HTTP API (currently supports NM-EPD-420-4C). See the [Inkstone project page](./inkstone-firmware.md) | [RockBase-iot/Inkstone-firmware](https://github.com/RockBase-iot/Inkstone-firmware) |
 | **emini Home** | Four-color "poster of your day" firmware (weather, headline, note, sunrise/sunset & moon phase, air quality) with phone-browser provisioning; the RockBase fork supports NM-EPD-420-4C (upstream [fiedoruk/emini-home](https://github.com/fiedoruk/emini-home), originally for the ZECTRIX NOTE4C) | [RockBase-iot/emini-home](https://github.com/RockBase-iot/emini-home) |
 | **AgentDeck** | Third-party project that puts AI coding agent status on a physical e-ink display, targeting the NM-EPD-420; flashable via the Web Flasher | [puritysb/AgentDeck](https://github.com/puritysb/AgentDeck) |
+| **OpenDisplay** | BLE-first open-source e-paper ecosystem with browser tooling and an official Home Assistant integration; ported to the NM-EPD-420-4C (`EP42YR_400x300`). See the [OpenDisplay guide](./EPD-opendisplay.md) | [OpenDisplay-Firmware@`nm-epd-420`](https://github.com/RockBase-iot/OpenDisplay-Firmware/tree/nm-epd-420) |
 
 ## Meshtastic Terminal
 
@@ -42,6 +43,10 @@ The [RockBase IoT Web Flasher](https://flash.rockbaseiot.com) now offers one-cli
 ## TRMNL Content Framework
 
 TRMNL is a "server pushes images/content on a schedule → e-ink displays them" framework. The port branch lets you use the NM-EPD-420 as a TRMNL-compatible device with self-hosted or third-party content sources.
+
+## OpenDisplay & Home Assistant
+
+OpenDisplay is a BLE-first open-source e-paper ecosystem: configure the device and upload images directly from a browser, no gateway required, and control it from Home Assistant through the official OpenDisplay integration (image entity, sensors, `drawcustom` / `upload_image` actions). The NM-EPD-420-4C port supports full-screen refresh, physical buttons, deep-sleep wake, and battery reporting. See the [OpenDisplay on NM-EPD-420-4C guide](./EPD-opendisplay.md).
 
 ## Biscuit {#biscuit}
 

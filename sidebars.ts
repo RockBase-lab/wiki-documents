@@ -60,6 +60,7 @@ const sidebars: SidebarsConfig = {
         'projects/esp32-dashboard-nm-epd-420',
         'projects/esp32-weather-epd',
         'projects/inkstone-firmware',
+        'projects/EPD-opendisplay',
         'projects/biscuit',
         'projects/hardware-buddy',
         {

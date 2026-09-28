@@ -1,12 +1,12 @@
 ---
 sidebar_position: 4
 title: NM-EPD-420 移植生态
-description: Meshtastic、MeshCore、TRMNL 等十大开源项目的 NM-EPD-420 官方移植
+description: Meshtastic、MeshCore、TRMNL 等十一大开源项目的 NM-EPD-420 官方移植
 ---
 
 # NM-EPD-420 移植生态
 
-[NM-EPD-420](../products/nm-epd-420.md)（ESP32-S3 + 4.2" 墨水屏）已被官方移植到十大开源项目。克隆对应分支即可直接编译烧录，相关应用固件也已上架 [RockBase IoT Web Flasher](https://flash.rockbaseiot.com)。
+[NM-EPD-420](../products/nm-epd-420.md)（ESP32-S3 + 4.2" 墨水屏）已被官方移植到十一大开源项目。克隆对应分支即可直接编译烧录，相关应用固件也已上架 [RockBase IoT Web Flasher](https://flash.rockbaseiot.com)。
 
 ## 已移植项目一览
 
@@ -22,6 +22,7 @@ description: Meshtastic、MeshCore、TRMNL 等十大开源项目的 NM-EPD-420 �
 | **Inkstone Firmware** | RockBase IoT 自研本地图片推送固件：浏览器打开 `inkstone.local` 即可选图、裁剪、双算法预览并推送上屏，另提供带 Bearer 鉴权的 HTTP API（目前支持 NM-EPD-420-4C）。详见 [Inkstone 项目介绍](./inkstone-firmware.md) | [RockBase-iot/Inkstone-firmware](https://github.com/RockBase-iot/Inkstone-firmware) |
 | **emini Home** | 四色墨水屏"一天海报"固件（天气、头条、便签、日出日落与月相、空气质量），手机浏览器即可完成配网；RockBase fork 已支持 NM-EPD-420-4C（上游 [fiedoruk/emini-home](https://github.com/fiedoruk/emini-home)，原平台为 ZECTRIX NOTE4C） | [RockBase-iot/emini-home](https://github.com/RockBase-iot/emini-home) |
 | **AgentDeck** | 第三方项目，把 AI coding agent 的状态显示在实体墨水屏上，面向 NM-EPD-420，可通过 Web Flasher 一键烧录 | [puritysb/AgentDeck](https://github.com/puritysb/AgentDeck) |
+| **OpenDisplay** | 以 BLE 优先的开源墨水屏生态，提供浏览器工具与官方 Home Assistant 集成；已移植至 NM-EPD-420-4C（`EP42YR_400x300`）。详见 [OpenDisplay 使用指南](./EPD-opendisplay.md) | [OpenDisplay-Firmware@`nm-epd-420`](https://github.com/RockBase-iot/OpenDisplay-Firmware/tree/nm-epd-420) |
 
 ## Meshtastic 终端
 
@@ -42,6 +43,10 @@ MeshCore 是一种轻量级混合路由的 Mesh 分组无线协议，NM-EPD-420 
 ## TRMNL 内容框架
 
 TRMNL 是一套"服务器定时下发图片/内容 → 墨水屏展示"的框架。移植分支让你可以把 NM-EPD-420 当作 TRMNL 兼容设备，接入自建或第三方内容源。
+
+## OpenDisplay 与 Home Assistant
+
+OpenDisplay 是以 BLE 优先的开源墨水屏生态：无需网关，直接在浏览器中配置设备、上传图像，并可通过官方 OpenDisplay 集成接入 Home Assistant（image 实体、传感器、`drawcustom` / `upload_image` 动作）。NM-EPD-420-4C 移植版已支持全屏刷新、物理按键、深睡眠唤醒与电池电量上报。详见 [OpenDisplay 使用指南](./EPD-opendisplay.md)。
 
 ## Biscuit {#biscuit}
 
